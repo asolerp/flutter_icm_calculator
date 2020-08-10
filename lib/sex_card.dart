@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SexCard extends StatelessWidget {
-  final Icon icon;
-  final String title;
+  final IconData icon;
+  final String label;
 
-  SexCard({@required this.icon, @required this.title});
+  SexCard({@required this.icon, @required this.label});
 
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      icon,
+      Icon(
+        icon,
+        size: 80.0,
+      ),
       SizedBox(
         height: 15.0,
       ),
       Text(
-        title,
+        label,
         style: TextStyle(
           fontSize: 18.0,
           color: Color(0xFF8D8E98),
